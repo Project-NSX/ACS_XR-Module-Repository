@@ -16,17 +16,26 @@
     <a-scene embedded arjs>
         <!-- GLTF Scene -->
         <a-assets>
-            <a-gltf-model id="mega"  src="mega_scene/scene.gltf"></a-gltf-model>
+            <a-gltf-model id="mega" src="mega_scene/scene.gltf"></a-gltf-model>
         </a-assets>
-        
-        <a-entity light="type: ambient; color: #BBB intensity: 2" ></a-entity>
-        <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>
 
+        <!-- Edits to default lighting to try and make scene easier to see -->
+        <a-entity light="type: ambient; color: #BBB intensity: 2"></a-entity>
+        <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>
+        
+        <!-- First Marker - Shows castle scene -->
         <a-marker preset="hiro">
             <a-entity gltf-model="#mega" position="0 0 0" scale="0.03 0.03 0.03"></a-entity>
             <!-- Cube position now placed at origin of marker -->
             <!-- <a-box position='0 0 -0.75' material='color: yellow;'></a-box> -->
         </a-marker>
+
+        <!-- Second Marker - Shows Red Box -->
+        <a-marker preset="kanji">
+            <a-box position='0 0.5 0' material='color: red;'>
+            </a-box>
+        </a-marker>
+
         <a-entity camera></a-entity>
     </a-scene>
 </body>
