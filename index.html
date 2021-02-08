@@ -18,9 +18,9 @@
         <a-assets>
             <a-gltf-model id="mega"  src="mega_scene/scene.gltf"></a-gltf-model>
         </a-assets>
-
-        <!-- <a-entity gltf-model="#mega" position="0 0 0" scale="0.005 0.005 0.005"></a-entity> -->
-        <a-entity light="type: directional; color: #FFF; intensity: 1" position="-0.5 1 1"></a-entity>
+        
+        <a-entity light="type: ambient; color: #BBB"></a-entity>
+        <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>
 
         <a-marker preset="hiro">
             <a-entity gltf-model="#mega" position="0 0 0" scale="0.03 0.03 0.03"></a-entity>
