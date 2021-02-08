@@ -16,13 +16,13 @@
     <a-scene embedded arjs>
         <!-- GLTF Scene -->
         <a-assets>
-            <a-gltf-model id="pi"  src="/work/labs/lab-1/mega_scene/scene.gltf"></a-gltf-model>
+            <a-gltf-model id="mega"  src="/work/labs/lab-1/mega_scene/scene.gltf"></a-gltf-model>
         </a-assets>
 
         <a-marker preset="hiro">
             <!-- Cube position now placed at origin of marker -->
             <!-- <a-box position='0 0 -0.75' material='color: yellow;'></a-box> -->
-            <a-entity gltf-model="#pi" position="0 0 -0.75" scale="0.05 0.05 0.05"></a-entity>
+            <a-entity gltf-model="#mega" position="0 0 1.5" scale="0.01 0.01 0.01"></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
