@@ -20,10 +20,11 @@
         </a-assets>
 
         <!-- <a-entity gltf-model="#mega" position="0 0 0" scale="0.005 0.005 0.005"></a-entity> -->
-        <a-entity light="type: ambient; color: #CCC"></a-entity>
-        
+
+
         <a-marker preset="hiro">
-            <a-entity gltf-model="#mega" position="0 0 0" scale="0.04 0.04 0.04"></a-entity>
+            <a-entity light="type: directional; color: #FFF; intensity: 1" position="-0.5 1 1"></a-entity>
+            <a-entity gltf-model="#mega" position="0 0 0" scale="0.03 0.03 0.03"></a-entity>
             <!-- Cube position now placed at origin of marker -->
             <!-- <a-box position='0 0 -0.75' material='color: yellow;'></a-box> -->
         </a-marker>
