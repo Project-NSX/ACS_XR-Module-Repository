@@ -1,0 +1,75 @@
+
+[
+    {
+        "AreaName": "Bangor",
+        "WeatherCon": 5,
+        "Temp": 26,
+        "Mon": 22,
+        "Tue": 24,
+        "Wed": 21,
+        "Thur": 23,
+        "Fri": 22,
+        "Sat": 18,
+        "Sun": 26
+    },
+    {
+        "AreaName": "Pwllheli",
+        "WeatherCon": 5,
+        "Temp": 26,
+        "Mon": 22,
+        "Tue": 24,
+        "Wed": 21,
+        "Thur": 23,
+        "Fri": 22,
+        "Sat": 18,
+        "Sun": 26
+    },
+    {
+        "AreaName": "Wrexham",
+        "WeatherCon": 5,
+        "Temp": 26,
+        "Mon": 22,
+        "Tue": 24,
+        "Wed": 21,
+        "Thur": 23,
+        "Fri": 22,
+        "Sat": 18,
+        "Sun": 26
+    },
+    {
+        "AreaName": "Porthmadog",
+        "WeatherCon": 5,
+        "Temp": 26,
+        "Mon": 22,
+        "Tue": 24,
+        "Wed": 21,
+        "Thur": 23,
+        "Fri": 22,
+        "Sat": 18,
+        "Sun": 26
+    },
+    {
+        "AreaName": "Aberystwyth",
+        "WeatherCon": 5,
+        "Temp": 26,
+        "Mon": 22,
+        "Tue": 24,
+        "Wed": 21,
+        "Thur": 23,
+        "Fri": 22,
+        "Sat": 18,
+        "Sun": 26
+    },
+    {
+        "AreaName": "Snowdonia National Park",
+        "WeatherCon": 5,
+        "Temp": 26,
+        "Mon": 22,
+        "Tue": 24,
+        "Wed": 21,
+        "Thur": 23,
+        "Fri": 22,
+        "Sat": 18,
+        "Sun": 26
+    }
+]
