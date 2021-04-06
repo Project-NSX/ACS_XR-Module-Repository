@@ -3,12 +3,12 @@
     {
         "areaname" : "bangor",
         "weathercon" : 5,
-        "temp" : 26,
-        "mon" : 22,
-        "tue" : 24,
-        "wed" : 21,
+        "temp" : 12,
+        "mon" : 9,
+        "tue" : 15,
+        "wed" : 16,
         "thu" : 23,
-        "fri" : 22,
+        "fri" : 25,
         "sat" : 18,
         "sun" : 26
     },
