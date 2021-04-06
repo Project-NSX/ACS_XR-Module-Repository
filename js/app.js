@@ -22,7 +22,7 @@ d3.json("/data/data.json", function (d)
     // current weather conditions (Sunny, cloudy etc)
     if (document.querySelector('#' + areaname))
     {
-      console.log(areaname + " TRUE!!!!");
+      //console.log(areaname + " Present on page. Setting data to page elements...");
       weather = data[i].weathercon;
       // Current area temperature
       var temp = data[i].temp;
@@ -159,9 +159,7 @@ d3.json("/data/data.json", function (d)
         .attr("depth", function (d) { return 0.95; })
         .attr("color", function (d)
         {
-  
           var color = '#';
-  
           if (d < 1)
           {
             color = "#99ccff";
@@ -187,9 +185,8 @@ d3.json("/data/data.json", function (d)
     }
     else
     {
-      console.log(areaname + " FALSE!!!");
+      console.log(areaname + " not found on page. Unable to place data on page elements...");
     }
-
   }
 });
 

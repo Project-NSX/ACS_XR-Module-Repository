@@ -13,7 +13,6 @@
 
 <!-- TODO: Areas data -->
 <!-- TODO: Page placement of Areas -->
-<!-- TODO: Json -->
 
 <body style='margin: 0px; overflow: hidden;'>
   <a-scene embedded arjs>
@@ -21,7 +20,7 @@
       <!-- Bangor -->
       <a-entity id="bangor">
         <!-- Area label -->
-        <a-plane position="0 0 0.3" rotation="-90 0 0" width="0.6" height="0.15" color="#ffffed">
+        <a-plane position="0 0 0.4" rotation="-90 0 0" width="0.6" height="0.15" color="#ffffed">
           <a-text align="center" position="0 0 0.03" width="3" value="Bangor" color="#000000"></a-text>
         </a-plane>
         <!-- Past temperatures bar chart -->
@@ -90,8 +89,8 @@
         <!-- Current weather icon -->
         <a-image id="bangorweatherselector" width="0.3" height="0.3" position="0 0 0" rotation="-90 0 0"></a-image>
         <!-- Current temperature with background -->
-        <a-cylinder id="bangortempbackground" position="-0.35 0 0" radius="0.15" height=".01" color="#">
-          <a-text id="bangortempselector" position="0 0.03 0" rotation="-90 0 0" width="3.3" value="" color="#000000"
+        <a-cylinder id="bangortempbackground" position="-0.4 0 0" radius="0.2" height="0.05" color="#">
+          <a-text id="bangortempselector" position="0 0.05 0" rotation="-90 0 0" width="3.3" value="" color="#000000"
             align="center"></a-text>
         </a-cylinder>
       </a-entity>
