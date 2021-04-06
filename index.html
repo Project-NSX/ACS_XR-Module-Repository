@@ -5,24 +5,33 @@
   <title>AR Demo</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-  
+
   <script src="https://d3js.org/d3.v3.min.js"></script>
   <script src="https://d3js.org/d3.v6.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="css/splash.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
-
+// TODO: Area titles
+// TODO: Day labels
+// TODO: Areas data
+// TODO: Page Areas
+// TODO: Json file
 <body style='margin: 0px; overflow: hidden;'>
   <a-scene embedded arjs>
     <a-marker preset="hiro">
-      <a-entity id="bangortempsselector" rotation="0 90 0" position="-0.01 -0.0 -0.0" scale="0.1 0.1 0.1"></a-entity>
-      <a-image id="bangorweatherselector" width="0.3" height="0.3" position="-0.2 0.8 -0.0" rotation="90 0 0"></a-image>
+      <a-entity id="bangor">
+        <a-entity id="bangortempsselector" rotation="0 90 0" position="0.2 0 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-image id="bangorweatherselector" width="0.3" height="0.3" position="-0.1 0 0" rotation="-90 0 0"></a-image>
+        <a-cylinder id="bangortempbackground" position="-0.4 0 0" radius="0.1" height=".01" color="#">
+          <a-text id="bangortempselector" position="0 0.03 0" rotation="-90 0 0" width="3.3" value="" color="#000000" align="center"></a-text>
+        </a-cylinder>
+      </a-entity>
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
 
-  <script src="js/appD3v6.js"></script> 
+  <script src="js/appD3v6.js"></script>
 </body>
 
 </html>
