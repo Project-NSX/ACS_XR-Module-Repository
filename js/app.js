@@ -48,6 +48,7 @@ for (var i = 0; i < data.length; i++)
   weather = area[1];
   // Current area temperature
   var temp = area[2];
+  var tempstring = temp + " C";
   // past temperatures. Used for bar chart 
   pasttemps = area[3];
   montemp = area[3][0];
@@ -83,7 +84,7 @@ for (var i = 0; i < data.length; i++)
   // Get selector from document for the temperature text
   var tempselector = document.querySelector('#' + areaname + 'tempselector');
   // Set the value of the text in the document to the saved temperature.
-  tempselector.setAttribute('value', temp);
+  tempselector.setAttribute('value', tempstring);
 
   // Save variable as different colours based on current temperature
   if (temp < 1)
@@ -180,8 +181,6 @@ for (var i = 0; i < data.length; i++)
     {
 
       var color = '#';
-
-
 
       if (d < 1)
       {
