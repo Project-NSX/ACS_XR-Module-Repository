@@ -1,32 +1,47 @@
-//TODO: Can't access data after it's entered. fix this
 // LOAD JSON FILE
-// data = d3.json("/data/data.json", function (error, data)
-// d3.json("/data/data.json", function (error, data)
+// d3.json("/data/data.json", function (d)
 // {
-//   data.forEach(function (d)
+//   return
 //   {
-//     d.AreaName = d.AreaName;
-//     d.Temp = +d.Temp;
-//     d.Mon = +d.Mon;
-//     d.Tue = +d.Tue;
-//     d.Wed = +d.Wed;
-//     d.Thur = +d.Thur;
-//     d.Fri = +d.Fri;
-//     d.Sat = +d.Sat;
-//     d.Sun = +d.Sun;
-//   });
+//     areaName : d.areaName;
+//     temp : d.temp;
+//     mon : d.mon;
+//     tue : d.tue;
+//     wed : d.wed;
+//     thu : d.thu;
+//     fri : d.fri;
+//     sat : d.sat;
+//     sun : d.sun;
+//   };
+// }).then(function (data) 
+// {
+
+//   for (var i = 0; i < data.length; i++)
+//   {
+//     var area = data[i];
+//     console.log(area);
+//     var areaname = area[0];
+//     console.log(areaname);
+//     // Doesn't work
+//   }
 // });
 
+
+
+// Stored data
 var data =
   [
-    ["bangor", 5, 25, [5, 10, 15, 20, 25, 30, 35]],
-    ["pwllheli", 5, 25, [5, 10, 15, 20, 25, 30, 35]]
+    ["bangor", 5, 15, [5, 10, 15, 20, 22, 25, 12]]//,
+    //["pwllheli", 5, 25, [5, 10, 15, 20, 25, 30, 35]]
   ];
 
-for (var i = 0; i < data.length; ++i)
+
+//for(var key of Object.keys(data))
+for (var i = 0; i < data.length; i++)
 {
   // save current area in the loop to a variable
   var area = data[i];
+  
   // area name, used in selectors and variable names
   var areaname = area[0];
   // current weather conditions (Sunny, cloudy etc)
@@ -35,6 +50,35 @@ for (var i = 0; i < data.length; ++i)
   var temp = area[2];
   // past temperatures. Used for bar chart 
   pasttemps = area[3];
+  montemp = area[3][0];
+  tuetemp = area[3][1];
+  wedtemp = area[3][2];
+  thutemp = area[3][3];
+  fritemp = area[3][4];
+  sattemp = area[3][5];
+  suntemp = area[3][6];
+
+  // Variables below are used to display temperature on the bar chart
+  var monselector = document.querySelector('#' + areaname + 'monselector');
+  monselector.setAttribute('value', montemp);
+
+  var tueselector = document.querySelector('#' + areaname + 'tueselector');
+  tueselector.setAttribute('value', tuetemp);
+
+  var wedselector = document.querySelector('#' + areaname + 'wedselector');
+  wedselector.setAttribute('value', wedtemp);
+
+  var thuselector = document.querySelector('#' + areaname + 'thuselector');
+  thuselector.setAttribute('value', thutemp);
+
+  var friselector = document.querySelector('#' + areaname + 'friselector');
+  friselector.setAttribute('value', fritemp);
+
+  var satselector = document.querySelector('#' + areaname + 'satselector');
+  satselector.setAttribute('value', sattemp);
+
+  var sunselector = document.querySelector('#' + areaname + 'sunselector');
+  sunselector.setAttribute('value', suntemp);
 
   // Get selector from document for the temperature text
   var tempselector = document.querySelector('#' + areaname + 'tempselector');
@@ -104,7 +148,7 @@ for (var i = 0; i < data.length; ++i)
   image.setAttribute('src', weathersrc);
 
   // Set grid to 1 for bar chart, grid will be 2d bar chart
-  var gridMax = 1; 
+  var gridMax = 1;
   var content = d3.select('#' + areaname + 'tempsselector');
 
   // Set values to cubes to determine how they're rendered.
@@ -134,11 +178,30 @@ for (var i = 0; i < data.length; ++i)
     .attr("depth", function (d) { return 0.95; })
     .attr("color", function (d)
     {
-      var letters = '0123456789ABCDEF'.split('');
+
       var color = '#';
-      for (var i = 0; i < 6; i++)
+
+
+
+      if (d < 1)
       {
-        color += letters[Math.floor(Math.random() * 16)];
+        color = "#99ccff";
+      }
+      else if (d < 10)
+      {
+        color = "#66ff66";
+      }
+      else if (d < 20)
+      {
+        color = "#ffff00";
+      }
+      else if (d < 30)
+      {
+        color = "#ff9900";
+      }
+      else
+      {
+        color = "#cc3300";
       }
       return color;
     });

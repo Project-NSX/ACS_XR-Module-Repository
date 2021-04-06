@@ -2,36 +2,104 @@
 <html lang="en">
 
 <head>
-  <title>AR Demo</title>
+  <title>ACS XR Assignment 3</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-  <script src="https://d3js.org/d3.v3.min.js"></script>
   <script src="https://d3js.org/d3.v6.min.js"></script>
-
   <link rel="stylesheet" type="text/css" href="css/splash.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
-// TODO: Area titles
-// TODO: Day labels
-// TODO: Areas data
-// TODO: Page Areas
-// TODO: Json file
+
+<!-- TODO: Areas data -->
+<!-- TODO: Page placement of Areas -->
+<!-- TODO: Json -->
+
 <body style='margin: 0px; overflow: hidden;'>
   <a-scene embedded arjs>
     <a-marker preset="hiro">
+      <!-- Bangor -->
       <a-entity id="bangor">
-        <a-entity id="bangortempsselector" rotation="0 90 0" position="0.2 0 0" scale="0.1 0.1 0.1"></a-entity>
-        <a-image id="bangorweatherselector" width="0.3" height="0.3" position="-0.1 0 0" rotation="-90 0 0"></a-image>
-        <a-cylinder id="bangortempbackground" position="-0.4 0 0" radius="0.1" height=".01" color="#">
-          <a-text id="bangortempselector" position="0 0.03 0" rotation="-90 0 0" width="3.3" value="" color="#000000" align="center"></a-text>
+        <!-- Area label -->
+        <a-plane position="0 0 0.3" rotation="-90 0 0" width="0.6" height="0.15" color="#ffffed">
+          <a-text align="center" position="0 0 0.03" width="3" value="Bangor" color="#000000"></a-text>
+        </a-plane>
+        <!-- Past temperatures bar chart -->
+        <a-entity id="bangortempsselector" rotation="0 90 0" position="0.25 0 0" scale="0.1 0.1 0.1">
+
+          <!-- Labels and numbers overlay on bar chart -->
+          <a-entity id="mon" position="-1 0 0" rotation="-90 -90 0">
+            <a-text id="bangormonselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.1" width="9" value="Mon" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+
+          <a-entity id="tue" position="-1 0 1" rotation="-90 -90 0">
+            <a-text id="bangortueselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.1" width="9" value="Tue" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+
+          <a-entity id="wed" position="-1 0 2" rotation="-90 -90 0">
+            <a-text id="bangorwedselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.1" width="9" value="Wed" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+
+          <a-entity id="thu" position="-1 0 3" rotation="-90 -90 0">
+            <a-text id="bangorthuselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.1" width="9" value="Thu" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+
+          
+          <a-entity id="fri" position="-1 0 4" rotation="-90 -90 0">
+            <a-text id="bangorfriselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.1" width="9" value="Thu" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          
+          <a-entity id="sat" position="-1 0 5" rotation="-90 -90 0">
+            <a-text id="bangorsatselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.1" width="9" value="Sat" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          
+          <a-entity id="sun" position="-1 0 6" rotation="-90 -90 0">
+            <a-text id="bangorsunselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.1" width="9" value="Sun" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- <a-sphere  position="-1 0 0" radius="1.25" color="#EF2D5E"></a-sphere> -->
+        </a-entity>
+
+        <!-- Current weather icon -->
+        <a-image id="bangorweatherselector" width="0.3" height="0.3" position="0 0 0" rotation="-90 0 0"></a-image>
+        <!-- Current temperature with background -->
+        <a-cylinder id="bangortempbackground" position="-0.35 0 0" radius="0.15" height=".01" color="#">
+          <a-text id="bangortempselector" position="0 0.03 0" rotation="-90 0 0" width="3.3" value="" color="#000000"
+            align="center"></a-text>
         </a-cylinder>
       </a-entity>
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
 
-  <script src="js/appD3v6.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
