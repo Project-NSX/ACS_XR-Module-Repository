@@ -11,93 +11,393 @@
   <link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 
-<!-- TODO: Areas data -->
-<!-- TODO: Page placement of Areas -->
-
 <body style='margin: 0px; overflow: hidden;'>
   <a-scene embedded arjs>
     <a-marker preset="hiro">
+
       <!-- Bangor -->
-      <a-entity id="bangor">
+      <a-entity id="bangor" position="-1.4 0 -1.5">
         <!-- Area label -->
-        <a-plane position="0 0 0.4" rotation="-90 0 0" width="0.6" height="0.15" color="#ffffed">
-          <a-text align="center" position="0 0 0.03" width="3" value="Bangor" color="#000000"></a-text>
+        <a-plane position="0 0 0.4" rotation="-90 0 0" width="0.7" height="0.15" color="#ffffed">
+          <a-text align="center" position="0 0 0.04" width="3" value="Bangor" color="#000000"></a-text>
         </a-plane>
         <!-- Past temperatures bar chart -->
         <a-entity id="bangortempsselector" rotation="0 90 0" position="0.25 0 0" scale="0.1 0.1 0.1">
-
           <!-- Labels and numbers overlay on bar chart -->
-          <a-entity id="mon" position="-1 0 0" rotation="-90 -90 0">
-            <a-text id="bangormonselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+          <!-- Monday -->
+          <a-entity id="mon" position="-1.1 0 0" rotation="-90 -90 0">
+            <a-text id="bangormonselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
               color="#000000"></a-text>
             <a-plane width="0.9" height="0.9" color="#ffffed">
-              <a-text align="center" position="0 0 0.1" width="9" value="Mon" color="#000000"></a-text>
+              <a-text align="center" position="0 0 0.3" width="9" value="Mon" color="#000000"></a-text>
             </a-plane>
           </a-entity>
-
-          <a-entity id="tue" position="-1 0 1" rotation="-90 -90 0">
-            <a-text id="bangortueselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+          <!-- Tuesday -->
+          <a-entity id="tue" position="-1.1 0 1" rotation="-90 -90 0">
+            <a-text id="bangortueselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
               color="#000000"></a-text>
             <a-plane width="0.9" height="0.9" color="#ffffed">
-              <a-text align="center" position="0 0 0.1" width="9" value="Tue" color="#000000"></a-text>
+              <a-text align="center" position="0 0 0.3" width="9" value="Tue" color="#000000"></a-text>
             </a-plane>
           </a-entity>
-
-          <a-entity id="wed" position="-1 0 2" rotation="-90 -90 0">
-            <a-text id="bangorwedselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+          <!-- Wednesday -->
+          <a-entity id="wed" position="-1.1 0 2" rotation="-90 -90 0">
+            <a-text id="bangorwedselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
               color="#000000"></a-text>
             <a-plane width="0.9" height="0.9" color="#ffffed">
-              <a-text align="center" position="0 0 0.1" width="9" value="Wed" color="#000000"></a-text>
+              <a-text align="center" position="0 0 0.3" width="9" value="Wed" color="#000000"></a-text>
             </a-plane>
           </a-entity>
-
-          <a-entity id="thu" position="-1 0 3" rotation="-90 -90 0">
-            <a-text id="bangorthuselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+          <!-- Thursday -->
+          <a-entity id="thu" position="-1.1 0 3" rotation="-90 -90 0">
+            <a-text id="bangorthuselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
               color="#000000"></a-text>
             <a-plane width="0.9" height="0.9" color="#ffffed">
-              <a-text align="center" position="0 0 0.1" width="9" value="Thu" color="#000000"></a-text>
+              <a-text align="center" position="0 0 0.3" width="9" value="Thu" color="#000000"></a-text>
             </a-plane>
           </a-entity>
-
-          
-          <a-entity id="fri" position="-1 0 4" rotation="-90 -90 0">
-            <a-text id="bangorfriselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+          <!-- Friday -->
+          <a-entity id="fri" position="-1.1 0 4" rotation="-90 -90 0">
+            <a-text id="bangorfriselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
               color="#000000"></a-text>
             <a-plane width="0.9" height="0.9" color="#ffffed">
-              <a-text align="center" position="0 0 0.1" width="9" value="Thu" color="#000000"></a-text>
+              <a-text align="center" position="0 0 0.3" width="9" value="Fri" color="#000000"></a-text>
             </a-plane>
           </a-entity>
-          
-          <a-entity id="sat" position="-1 0 5" rotation="-90 -90 0">
-            <a-text id="bangorsatselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+          <!-- Saturday -->
+          <a-entity id="sat" position="-1.1 0 5" rotation="-90 -90 0">
+            <a-text id="bangorsatselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
               color="#000000"></a-text>
             <a-plane width="0.9" height="0.9" color="#ffffed">
-              <a-text align="center" position="0 0 0.1" width="9" value="Sat" color="#000000"></a-text>
+              <a-text align="center" position="0 0 0.3" width="9" value="Sat" color="#000000"></a-text>
             </a-plane>
           </a-entity>
-          
-          <a-entity id="sun" position="-1 0 6" rotation="-90 -90 0">
-            <a-text id="bangorsunselector" align="center" rotation="90 0 0" position="0 0.5 0.6" width="18"
+          <!-- Sunday -->
+          <a-entity id="sun" position="-1.1 0 6" rotation="-90 -90 0">
+            <a-text id="bangorsunselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
               color="#000000"></a-text>
             <a-plane width="0.9" height="0.9" color="#ffffed">
-              <a-text align="center" position="0 0 0.1" width="9" value="Sun" color="#000000"></a-text>
+              <a-text align="center" position="0 0 0.3" width="9" value="Sun" color="#000000"></a-text>
             </a-plane>
           </a-entity>
-          <!-- <a-sphere  position="-1 0 0" radius="1.25" color="#EF2D5E"></a-sphere> -->
         </a-entity>
-
         <!-- Current weather icon -->
         <a-image id="bangorweatherselector" width="0.3" height="0.3" position="0 0 0" rotation="-90 0 0"></a-image>
         <!-- Current temperature with background -->
-        <a-cylinder id="bangortempbackground" position="-0.4 0 0" radius="0.2" height="0.05" color="#">
-          <a-text id="bangortempselector" position="0 0.05 0" rotation="-90 0 0" width="3.3" value="" color="#000000"
+        <a-cylinder id="bangortempbackground" position="-0.4 0 0" radius="0.2" height="0.04" color="#">
+          <a-text id="bangortempselector" position="0 0.06 0" rotation="-90 0 0" width="3.3" value="" color="#000000"
             align="center"></a-text>
         </a-cylinder>
       </a-entity>
+
+
+      <!-- Snowdonia -->
+      <a-entity id="snowdonia" position="-0.4 0 -0.5">
+        <!-- Area label -->
+        <a-plane position="0 0 0.4" rotation="-90 0 0" width="0.7" height="0.15" color="#ffffed">
+          <a-text align="center" position="0 0 0.04" width="3" value="Snowdonia" color="#000000"></a-text>
+        </a-plane>
+        <!-- Past temperatures bar chart -->
+        <a-entity id="snowdoniatempsselector" rotation="0 90 0" position="0.25 0 0" scale="0.1 0.1 0.1">
+          <!-- Labels and numbers overlay on bar chart -->
+          <!-- Monday -->
+          <a-entity id="mon" position="-1.1 0 0" rotation="-90 -90 0">
+            <a-text id="snowdoniamonselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Mon" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Tuesday -->
+          <a-entity id="tue" position="-1.1 0 1" rotation="-90 -90 0">
+            <a-text id="snowdoniatueselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Tue" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Wednesday -->
+          <a-entity id="wed" position="-1.1 0 2" rotation="-90 -90 0">
+            <a-text id="snowdoniawedselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Wed" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Thursday -->
+          <a-entity id="thu" position="-1.1 0 3" rotation="-90 -90 0">
+            <a-text id="snowdoniathuselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Thu" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Friday -->
+          <a-entity id="fri" position="-1.1 0 4" rotation="-90 -90 0">
+            <a-text id="snowdoniafriselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Fri" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Saturday -->
+          <a-entity id="sat" position="-1.1 0 5" rotation="-90 -90 0">
+            <a-text id="snowdoniasatselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Sat" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Sunday -->
+          <a-entity id="sun" position="-1.1 0 6" rotation="-90 -90 0">
+            <a-text id="snowdoniasunselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Sun" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+        </a-entity>
+        <!-- Current weather icon -->
+        <a-image id="snowdoniaweatherselector" width="0.3" height="0.3" position="0 0 0" rotation="-90 0 0"></a-image>
+        <!-- Current temperature with background -->
+        <a-cylinder id="snowdoniatempbackground" position="-0.4 0 0" radius="0.2" height="0.05" color="#">
+          <a-text id="snowdoniatempselector" position="0 0.06 0" rotation="-90 0 0" width="3.3" value="" color="#000000"
+            align="center"></a-text>
+        </a-cylinder>
+      </a-entity>
+
+
+      <!-- Wrexham -->
+      <a-entity id="wrexham" position="2.2 0 -0.5">
+        <!-- Area label -->
+        <a-plane position="0 0 0.4" rotation="-90 0 0" width="0.7" height="0.15" color="#ffffed">
+          <a-text align="center" position="0 0 0.04" width="3" value="Wrexham" color="#000000"></a-text>
+        </a-plane>
+        <!-- Past temperatures bar chart -->
+        <a-entity id="wrexhamtempsselector" rotation="0 90 0" position="0.25 0 0" scale="0.1 0.1 0.1">
+          <!-- Labels and numbers overlay on bar chart -->
+          <!-- Monday -->
+          <a-entity id="mon" position="-1.1 0 0" rotation="-90 -90 0">
+            <a-text id="wrexhammonselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Mon" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Tuesday -->
+          <a-entity id="tue" position="-1.1 0 1" rotation="-90 -90 0">
+            <a-text id="wrexhamtueselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Tue" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Wednesday -->
+          <a-entity id="wed" position="-1.1 0 2" rotation="-90 -90 0">
+            <a-text id="wrexhamwedselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Wed" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Thursday -->
+          <a-entity id="thu" position="-1.1 0 3" rotation="-90 -90 0">
+            <a-text id="wrexhamthuselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Thu" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Friday -->
+          <a-entity id="fri" position="-1.1 0 4" rotation="-90 -90 0">
+            <a-text id="wrexhamfriselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Fri" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Saturday -->
+          <a-entity id="sat" position="-1.1 0 5" rotation="-90 -90 0">
+            <a-text id="wrexhamsatselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Sat" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Sunday -->
+          <a-entity id="sun" position="-1.1 0 6" rotation="-90 -90 0">
+            <a-text id="wrexhamsunselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Sun" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+        </a-entity>
+        <!-- Current weather icon -->
+        <a-image id="wrexhamweatherselector" width="0.3" height="0.3" position="0 0 0" rotation="-90 0 0"></a-image>
+        <!-- Current temperature with background -->
+        <a-cylinder id="wrexhamtempbackground" position="-0.4 0 0" radius="0.2" height="0.05" color="#">
+          <a-text id="wrexhamtempselector" position="0 0.06 0" rotation="-90 0 0" width="3.3" value="" color="#000000"
+            align="center"></a-text>
+        </a-cylinder>
+      </a-entity>
+
+
+      <!-- Dolgellau -->
+      <a-entity id="dolgellau" position="-0.5 0 1.5">
+        <!-- Area label -->
+        <a-plane position="0 0 0.4" rotation="-90 0 0" width="0.7" height="0.15" color="#ffffed">
+          <a-text align="center" position="0 0 0.04" width="3" value="Dolgellau" color="#000000"></a-text>
+        </a-plane>
+        <!-- Past temperatures bar chart -->
+        <a-entity id="dolgellautempsselector" rotation="0 90 0" position="0.25 0 0" scale="0.1 0.1 0.1">
+          <!-- Labels and numbers overlay on bar chart -->
+          <!-- Monday -->
+          <a-entity id="mon" position="-1.1 0 0" rotation="-90 -90 0">
+            <a-text id="dolgellaumonselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Mon" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Tuesday -->
+          <a-entity id="tue" position="-1.1 0 1" rotation="-90 -90 0">
+            <a-text id="dolgellautueselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Tue" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Wednesday -->
+          <a-entity id="wed" position="-1.1 0 2" rotation="-90 -90 0">
+            <a-text id="dolgellauwedselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Wed" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Thursday -->
+          <a-entity id="thu" position="-1.1 0 3" rotation="-90 -90 0">
+            <a-text id="dolgellauthuselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Thu" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Friday -->
+          <a-entity id="fri" position="-1.1 0 4" rotation="-90 -90 0">
+            <a-text id="dolgellaufriselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Fri" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Saturday -->
+          <a-entity id="sat" position="-1.1 0 5" rotation="-90 -90 0">
+            <a-text id="dolgellausatselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Sat" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Sunday -->
+          <a-entity id="sun" position="-1.1 0 6" rotation="-90 -90 0">
+            <a-text id="dolgellausunselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Sun" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+        </a-entity>
+        <!-- Current weather icon -->
+        <a-image id="dolgellauweatherselector" width="0.3" height="0.3" position="0 0 0" rotation="-90 0 0"></a-image>
+        <!-- Current temperature with background -->
+        <a-cylinder id="dolgellautempbackground" position="-0.4 0 0" radius="0.2" height="0.05" color="#">
+          <a-text id="dolgellautempselector" position="0 0.06 0" rotation="-90 0 0" width="3.3" value="" color="#000000"
+            align="center"></a-text>
+        </a-cylinder>
+      </a-entity>
+
+
+      <!-- Pwllheli -->
+      <a-entity id="pwllheli" position="-2.7 0 0.5">
+        <!-- Area label -->
+        <a-plane position="0 0 0.4" rotation="-90 0 0" width="0.7" height="0.15" color="#ffffed">
+          <a-text align="center" position="0 0 0.04" width="3" value="Pwllheli" color="#000000"></a-text>
+        </a-plane>
+        <!-- Past temperatures bar chart -->
+        <a-entity id="pwllhelitempsselector" rotation="0 90 0" position="0.25 0 0" scale="0.1 0.1 0.1">
+          <!-- Labels and numbers overlay on bar chart -->
+          <!-- Monday -->
+          <a-entity id="mon" position="-1.1 0 0" rotation="-90 -90 0">
+            <a-text id="pwllhelimonselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Mon" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Tuesday -->
+          <a-entity id="tue" position="-1.1 0 1" rotation="-90 -90 0">
+            <a-text id="pwllhelitueselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Tue" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Wednesday -->
+          <a-entity id="wed" position="-1.1 0 2" rotation="-90 -90 0">
+            <a-text id="pwllheliwedselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Wed" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Thursday -->
+          <a-entity id="thu" position="-1.1 0 3" rotation="-90 -90 0">
+            <a-text id="pwllhelithuselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Thu" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Friday -->
+          <a-entity id="fri" position="-1.1 0 4" rotation="-90 -90 0">
+            <a-text id="pwllhelifriselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Fri" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Saturday -->
+          <a-entity id="sat" position="-1.1 0 5" rotation="-90 -90 0">
+            <a-text id="pwllhelisatselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Sat" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+          <!-- Sunday -->
+          <a-entity id="sun" position="-1.1 0 6" rotation="-90 -90 0">
+            <a-text id="pwllhelisunselector" align="center" rotation="90 0 0" position="0 0.4 0.7" width="18"
+              color="#000000"></a-text>
+            <a-plane width="0.9" height="0.9" color="#ffffed">
+              <a-text align="center" position="0 0 0.3" width="9" value="Sun" color="#000000"></a-text>
+            </a-plane>
+          </a-entity>
+        </a-entity>
+        <!-- Current weather icon -->
+        <a-image id="pwllheliweatherselector" width="0.3" height="0.3" position="0 0 0" rotation="-90 0 0"></a-image>
+        <!-- Current temperature with background -->
+        <a-cylinder id="pwllhelitempbackground" position="-0.4 0 0" radius="0.2" height="0.05" color="#">
+          <a-text id="pwllhelitempselector" position="0 0.06 0" rotation="-90 0 0" width="3.3" value="" color="#000000"
+            align="center"></a-text>
+        </a-cylinder>
+      </a-entity>
+
+
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
-
   <script src="js/app.js"></script>
 </body>
 
