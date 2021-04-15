@@ -1,5 +1,5 @@
 // LOAD JSON FILE
-d3.json("../data/data.json", function (d)
+d3.json("data/data.json", function (d)
 {
   return
   {
