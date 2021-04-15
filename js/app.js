@@ -69,23 +69,23 @@ d3.json("data/data.json", function (d)
       // Save variable as different colours based on current temperature
       if (temp < 1)
       {
-        var backgroundsrc = new THREE.Color( 99ccff );
+        var backgroundsrc = "#99ccff";
       }
       else if (temp < 10)
       {
-        var backgroundsrc = new THREE.Color( 66ff66 );
+        var backgroundsrc = "#66ff66";
       }
       else if (temp < 20)
       {
-        var backgroundsrc = new THREE.Color( ffff00 );
+        var backgroundsrc = "#ffff00";
       }
       else if (temp < 30)
       {
-        var backgroundsrc = new THREE.Color( ff9900 );
+        var backgroundsrc = "#ff9900";
       }
       else
       {
-        var backgroundsrc = new THREE.Color( cc3300 );
+        var backgroundsrc = "#cc3300";
       }
       
       // Temperature text background selector
