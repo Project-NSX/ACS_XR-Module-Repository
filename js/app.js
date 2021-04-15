@@ -97,31 +97,31 @@ d3.json("data/data.json", function (d)
       {
         // Icon from: https://www.flaticon.com/free-icon/snow_3026312
         // Author: https://www.flaticon.com/authors/freepik
-        var weathersrc = "/img/snow.png";
+        var weathersrc = "img/snow.png";
       }
       else if (weather == 2)
       {
         // Icon from: https://www.flaticon.com/free-icon/rain_1146858
         // Author: https://www.flaticon.com/authors/freepik
-        var weathersrc = "/img/rain.png";
+        var weathersrc = "img/rain.png";
       }
       else if (weather == 3)
       {
         // Icon from: https://www.flaticon.com/free-icon/wind_1506761
         // Author: https://www.flaticon.com/authors/smalllikeart
-        var weathersrc = "/img/wind.png";
+        var weathersrc = "img/wind.png";
       }
       else if (weather == 4)
       {
         // Icon from: https://www.flaticon.com/free-icon/cloud_1163624
         // Author: https://www.flaticon.com/authors/iconixar
-        var weathersrc = "/img/cloud.png";
+        var weathersrc = "img/cloud.png";
       }
       else if (weather == 5)
       {
         // Icon from: https://www.flaticon.com/free-icon/sun_2917242?related_id=2917242&origin=search
         // Author: https://www.flaticon.com/authors/good-ware
-        var weathersrc = "/img/sun.png";
+        var weathersrc = "img/sun.png";
       }
       // Get image from page
       var image = document.querySelector('#' + areaname + 'weatherselector');
