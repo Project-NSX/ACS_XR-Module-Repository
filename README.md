@@ -4,7 +4,7 @@ The project uses HTML (A-Frame), CSS, and JavaScript (AR.js for Augmented Realit
 
 ## Map Image
 The image below is the image intended to be used with the project
-![](ASSIGNMENT-FILES/Final-Screenshots/6.png?raw=true "Map with Marker")
+![](arjs-map.png?raw=true "Map with Marker")
 
 ## 
 The project is hosted at the following url and is accessible via mobile:
